@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Task</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      form {
+        background-color: #fff;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: block;
+        color: #333;
+      }
+
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      h4 {
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add New Task</h1>
+    <form action="/tasks/add" method="POST">
+      <label for="taskStatus">Task Status:</label>
+      <select name="taskStatus" id="taskStatus" required>
+        <option value="incomplete" selected>Incomplete</option>
+      </select>
+
+      <label for="task_context">Task Context:</label>
+      <textarea
+        name="task_context"
+        id="task_context"
+        rows="4"
+        required
+      ></textarea>
+
+      <button type="submit">Add Task</button>
+    </form>
+
+    <h4>©All rights reserved to Rachel Adi Levon</h4>
+  </body>
+</html>
